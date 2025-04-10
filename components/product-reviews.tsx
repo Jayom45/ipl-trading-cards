@@ -53,9 +53,9 @@ const mockReviews: Review[] = [
 
 export default function ProductReviews({ productId }: { productId: string }) {
   const { toast } = useToast()
-  const [reviews, setReviews] = (useState<Review[]>(
-    mockReviews.filter(review => review.productId === productId)
-  ) = useState<Review[]>(mockReviews.filter((review) => review.productId === productId)))
+  const [reviews, setReviews] = useState<Review[]>(
+    mockReviews.filter((review) => review.productId === productId)
+  ); 
   const [newReview, setNewReview] = useState({
     rating: 5,
     comment: "",
